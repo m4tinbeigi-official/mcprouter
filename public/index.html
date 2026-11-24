@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCPRouter — Provider Router</title>
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --panel: #12141c;
+      --border: #262a36;
+      --text: #e6eaf0;
+      --muted: #8a90a0;
+      --accent: #0000f2;
+      --accent-soft: #1a1f3a;
+      --ok: #00ffaa;
+      --warn: #ffaa1a;
+      --bad: #ff4949;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
+      font-size: 14px;
+      padding: 24px;
+    }
+    a { color: var(--accent); }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    header {
+      display: flex; align-items: center; gap: 16px; border-bottom: 1px solid var(--border);
+      padding-bottom: 16px; margin-bottom: 24px;
+    }
+    header .logo { font-size: 22px; font-weight: 700; letter-spacing: .5px; }
+    header .sub { color: var(--muted); font-size: 13px; }
+    nav { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    nav a {
+      color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 6px;
+      transition: background .15s, color .15s;
+    }
+    nav a:hover { background: var(--accent-soft); color: var(--text); }
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+      padding: 18px; margin-bottom: 16px;
+    }
+    h2 { font-size: 16px; margin: 0 0 12px; }
+    .badge {
+      display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px;
+      margin-left: 6px; vertical-align: middle;
+    }
+    .badge-official { background: #1a3a1a; color: var(--ok); }
+    .badge-unofficial { background: #3a241a; color: var(--warn); }
+    .meta { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    pre { background: #080a10; border: 1px solid var(--border); border-radius: 6px; padding: 12px; overflow: auto; max-height: 320px; }
+    code { color: var(--accent); }
+    footer { color: var(--muted); font-size: 12px; margin-top: 32px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">MCPRouter</div>
+      <div class="sub">Self-hosted MCP proxy &amp; provider router</div>
+    </header>
+    <nav>
+      <a href="#providers">Providers</a>
+      <a href="#keys">API Keys</a>
+      <a href="#proxy">Proxy</a>
+      <a href="#adapters">Adapters</a>
+      <a href="#logs">Logs</a>
+      <a href="#settings">Settings</a>
+    </nav>
+
+    <section class="card" id="providers">
+      <h2>Providers</h2>
+      <p>Manage adapters: enable/disable, official flag, budget, proxy, API key.</p>
+    </section>
+
+    <section class="card" id="keys">
+      <h2>API Keys</h2>
+      <p>Stored encrypted at rest. Key never leaves your host.</p>
+    </section>
+
+    <section class="card" id="proxy">
+      <h2>Proxy</h2>
+      <p>Per-provider proxy rules: none / http / socks5 / vmess / wireguard.</p>
+    </section>
+
+    <section class="card" id="adapters">
+      <h2>Adapters</h2>
+      <p>Add site MCP adapters; no core changes required.</p>
+    </section>
+
+    <section class="card" id="logs">
+      <h2>Logs &amp; Metrics</h2>
+      <pre>{ "evand": { "calls": 0, "budgetConsumed": 0, "errors": 0 } }</pre>
+    </section>
+
+    <section class="card" id="settings">
+      <h2>Settings</h2>
+      <p>Locale (en / fa), default proxy, panel auth, open-source notice.</p>
+    </section>
+
+    <footer>MCPRouter 0.1.0 &middot; MIT &middot; zero em-dash</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "mcprouter",
+  "version": "0.1.0",
+  "description": "Self-hosted MCP proxy & provider router: manage adapters, budgets, official flags, API keys, and proxy rules from one panel.",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/server.js",
+  "bin": {
+    "mcprouter": "src/cli.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "cli": "node src/cli.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "proxy",
+    "router",
+    "self-hosted",
+    "ai-gateway",
+    "adapter"
+  ],
+  "author": "MCPRouter Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcprouter/mcprouter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mcprouter/mcprouter/issues"
+  }
+}
